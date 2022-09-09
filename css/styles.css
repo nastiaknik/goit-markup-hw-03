@@ -9,6 +9,7 @@
   --grey-background-color: #f5f4fa;
   --grey-stroke-color: #ececec;
   --projects-cards-color: #eeeeee;
+  --grey-txt-color-60: rgba(255, 255, 255, 0.6);
   --main-font: "Roboto", sans-serif;
   --logo-font: "Raleway", sans-serif;
   --main-font-size: 14px;
@@ -20,36 +21,59 @@ body {
   color: var(--main-color-font);
   font-size: var(--main-font-size);
 }
-.header {
-  background-color: var(--white-color);
-  display: flex;
+
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .link {
   text-decoration: none;
   color: inherit;
 }
+
+/* index styles */
+.header {
+  background-color: var(--white-color);
+}
+
 .logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+  color: var(--black-color);
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
-  color: var(--black-color);
   letter-spacing: 0.03em;
   font-family: var(--logo-font);
 }
 .logo-wrap {
   color: var(--accent-color);
 }
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
+
+.header .list-item + .list-item {
+  margin-left: 50px;
 }
 
 .main-nav {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
@@ -58,50 +82,69 @@ body {
 .main-nav:focus {
   color: var(--accent-color);
 }
+
 .current {
   color: var(--accent-color);
 }
+
 .link-contact {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--secondary-color-font);
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-  color: var(--secondary-color-font);
 }
 .link-contact:focus,
 .link-contact:hover {
   color: var(--accent-color);
 }
+
 .hero-section {
+  margin-bottom: 94px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--main-color-background);
 }
+
 .title {
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 33px;
+  color: var(--white-color);
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
-  color: var(--white-color);
 }
+
 .btn-service {
-  border: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 32px;
+  background-color: var(--accent-color);
+  color: var(--white-color);
   font-family: var(--main-font);
   font-size: var(--secondary-font-size);
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  color: var(--white-color);
   font-weight: 700;
   text-align: center;
-  align-items: center;
-  display: flex;
   cursor: pointer;
-  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
 }
 .btn-service:focus,
 .btn-service:hover {
   background-color: var(--btn-active-color);
 }
+
 .visually-hidden {
   overflow: hidden;
   margin: -1px;
@@ -109,22 +152,33 @@ body {
   border: 0;
   padding: 0;
 }
+
+.features .list-item {
+  margin-right: 30px;
+}
+.features .list-item:last-child {
+  margin-right: 0;
+  margin-bottom: 94px;
+}
+
 .subtitle-feature {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
+
 .description-feature {
+  color: var(--secondary-color-font);
+  width: 270px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
-  color: var(--secondary-color-font);
 }
-.team-section {
-  background-color: var(--grey-background-color);
-}
+
 .section-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -132,58 +186,103 @@ body {
   text-align: center;
 }
 
+.what-we-do .list-item + .list-item {
+  margin-left: 30px;
+}
+.what-we-do .list-item:last-child {
+  margin-bottom: 94px;
+}
+
+.team-section {
+  background-color: var(--grey-background-color);
+  padding-top: 94px;
+}
+
+.team-section .card:last-child {
+  margin-bottom: 94px;
+}
+
+.team-section .list-item + .list-item {
+  margin-left: 30px;
+}
+
+.card {
+  padding-bottom: 30px;
+}
+
 .team-member-name {
+  margin-top: 30px;
   font-weight: 500;
   font-size: var(--secondary-font-size);
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .job-position {
+  margin-top: 10px;
   color: var(--secondary-color-font);
   font-size: var(--secondary-font-size);
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .footer {
   background-color: var(--main-color-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-wrap-footer {
   color: var(--white-color);
 }
-.address {
+
+.address .list-item + .list-item {
+  margin-top: 9px;
+}
+
+.link-address-footer {
+  color: var(--white-color);
   font-style: normal;
   line-height: calc(24 / 14);
   letter-spacing: 0.02em;
-  color: var(--white-color);
 }
-.address:focus,
-.address:hover {
+.link-address-footer:focus,
+.link-address-footer:hover {
   color: var(--accent-color);
 }
 
 .link-contact-footer {
+  color: var(--grey-txt-color-60);
   font-style: normal;
   line-height: calc(24 / 14);
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.6);
 }
 .link-contact-footer:focus,
 .link-contact-footer:hover {
   color: var(--accent-color);
 }
 
+/* portfolio styles */
+
+.projects {
+  margin-bottom: 94px;
+}
+
 .btn-projects {
+  padding: 6px 22px;
   border: none;
+  background-color: var(--grey-background-color);
+  color: var(--main-color-font);
   font-family: var(--main-font);
   font-weight: 500;
   font-size: var(--secondary-font-size);
   line-height: calc(26 / 16);
+  letter-spacing: 0.03em;
   text-align: center;
   cursor: pointer;
-  letter-spacing: 0.03em;
+  border-radius: 4px;
 }
 .btn-projects:focus,
 .btn-projects:hover {
@@ -191,17 +290,32 @@ body {
   color: var(--white-color);
 }
 
+.projects .list-item + .list-item {
+  margin-left: 8px;
+}
+.projects .list-item:last-child {
+  margin-bottom: 50px;
+}
+
 .title-project {
+  margin-top: 20px;
+  color: var(--main-color-font);
   font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
-  color: var(--main-color-font);
   letter-spacing: 0.06em;
 }
 
 .type-project {
+  margin-top: 4px;
+  color: var(--secondary-color-font);
   font-size: var(--secondary-font-size);
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
-  color: var(--secondary-color-font);
+}
+.project-card {
+  padding-bottom: 20px;
+}
+.project-card + .project-card {
+  margin-left: 30px;
 }

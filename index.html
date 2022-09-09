@@ -38,15 +38,17 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Modern-normalize -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <!-- Styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
-      <nav>
+      <nav class="site-nav">
         <a class="link logo" href="./index.html" lang="en"
           ><span class="logo-wrap">Web</span>Studio</a
         >
@@ -80,7 +82,7 @@
         <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
         <button class="btn-service" type="button">Замовити послугу</button>
       </section>
-      <section>
+      <section class="features">
         <h2 class="visually-hidden">Наші переваги</h2>
         <ul class="list">
           <li class="list-item">
@@ -112,7 +114,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section class="what-we-do">
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="list">
           <li class="list-item">
@@ -144,7 +146,7 @@
       <section class="team-section">
         <h2 class="section-title">Наша команда</h2>
         <ul class="list">
-          <li class="list-item team">
+          <li class="list-item card">
             <img
               src="./images/team1.jpg"
               alt="Ігор Дем'яненко"
@@ -154,7 +156,7 @@
             <h3 class="team-member-name">Ігор Дем'яненко</h3>
             <p class="job-position" lang="en">Product Designer</p>
           </li>
-          <li class="list-item team">
+          <li class="list-item card">
             <img
               src="./images/team2.jpg"
               alt="Ольга Рєпіна"
@@ -164,7 +166,7 @@
             <h3 class="team-member-name">Ольга Рєпіна</h3>
             <p class="job-position" lang="en">Frontend Developer</p>
           </li>
-          <li class="list-item team">
+          <li class="list-item card">
             <img
               src="./images/team3.jpg"
               alt="Микола Тарасов"
@@ -174,7 +176,7 @@
             <h3 class="team-member-name">Микола Тарасов</h3>
             <p class="job-position" lang="en">Marketing</p>
           </li>
-          <li class="list-item team">
+          <li class="list-item card">
             <img
               src="./images/team4.jpg"
               alt="Михайло Єрмаков"
@@ -192,11 +194,11 @@
         ><span class="logo-wrap">Web</span
         ><span class="logo-wrap-footer">Studio</span></a
       >
-      <address>
+      <address class="address">
         <ul class="list">
           <li class="list-item">
             <a
-              class="link address"
+              class="link link-address-footer"
               href="https://goo.gl/maps/8BweSNwP1uSrpVsL9"
               target="_blank"
               rel="noopener noreferrer nofollow"
