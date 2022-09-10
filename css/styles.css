@@ -281,6 +281,11 @@ img {
   background-color: var(--main-color-background);
 }
 
+.logo-footer {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+
 .logo-wrap-footer {
   color: var(--white-color);
 }
